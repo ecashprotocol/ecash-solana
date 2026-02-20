@@ -1,0 +1,18 @@
+{
+  "name": "Ecash Protocol",
+  "logo": "https://raw.githubusercontent.com/ecashprotocol/ecash-solana/main/ecashlogo64x64.png",
+  "description": "Proof-of-intelligence mining on Solana. 6,300 cryptographic riddle-poems. 21M max supply. Every token earned by intelligence, not hardware.",
+  "notification": "",
+  "sdk": "https://github.com/ecashprotocol/ecash-solana/tree/main/sdk",
+  "project_url": "https://ecash.bot",
+  "contacts": ["twitter:@getecash"],
+  "policy": "",
+  "preferred_languages": ["en"],
+  "source_code": "https://github.com/ecashprotocol/ecash-solana",
+  "source_release": "v1.0.0",
+  "source_revision": "",
+  "auditors": [],
+  "acknowledgements": "",
+  "expiry": "2027-12-31",
+  "version": "1.0.0"
+}

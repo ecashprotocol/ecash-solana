@@ -1,0 +1,18 @@
+# For Railway Docker builds - allow api/data files
+node_modules/
+**/node_modules/
+target/
+.anchor/
+test-ledger/
+*.log
+.DS_Store
+.env
+
+# Wallet files - never include
+deployer.json
+wallet-*.json
+*.keypair
+
+# DO NOT ignore api data - these are needed for the server
+!api/data/
+!api/data/*

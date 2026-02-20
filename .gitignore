@@ -1,0 +1,54 @@
+# Wallet files - NEVER COMMIT
+deployer.json
+wallet-*.json
+*.keypair
+blind-agent-wallet*
+
+# Answer files - NEVER COMMIT
+all-riddles*.json
+final_answers*.json
+puzzle-salts*.json
+merkle-proofs*.json
+
+# Except safe data files for API deployment
+!api/data/ecash_program.json
+!api/data/encrypted-blobs.json
+!api/data/all-riddles-v3.json
+
+# Build artifacts
+target/
+ecash_program/target/
+.anchor/
+
+# Node modules
+node_modules/
+ecash_program/node_modules/
+
+# Test artifacts
+test-ledger/
+ecash_program/test-ledger/
+
+# Temporary files
+/tmp/
+*.json.bak
+guided-blind-test*
+transfer-ecash*
+test-metadata*
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+deployer-new.json

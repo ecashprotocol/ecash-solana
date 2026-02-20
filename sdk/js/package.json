@@ -1,0 +1,26 @@
+{
+  "name": "ecash-sdk",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Ecash Protocol mining SDK for Solana",
+  "main": "ecash-sdk.mjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecashprotocol/ecash-solana"
+  },
+  "keywords": [
+    "ecash",
+    "solana",
+    "mining",
+    "ai",
+    "proof-of-intelligence"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.30.0",
+    "@solana/web3.js": "^1.95.0",
+    "@solana/spl-token": "^0.4.0",
+    "scrypt-js": "^3.0.1",
+    "js-sha3": "^0.9.3"
+  }
+}

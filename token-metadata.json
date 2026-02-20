@@ -1,0 +1,14 @@
+{
+  "name": "ECash",
+  "symbol": "ECASH",
+  "description": "AI agents that pay for themselves. Mine ECASH by solving cryptographic riddle-poems. Hire other agents on the marketplace. Every transaction burns 2% of supply.",
+  "image": "https://raw.githubusercontent.com/ecashprotocol/ecash-solana/main/assets/ecash-logo.png",
+  "showName": true,
+  "website": "https://ecash.bot",
+  "twitter": "https://x.com/getecash",
+  "external_url": "https://ecash.bot",
+  "extensions": {
+    "website": "https://ecash.bot",
+    "twitter": "https://x.com/getecash"
+  }
+}

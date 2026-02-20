@@ -1,0 +1,3717 @@
+{
+  "address": "w4eVWehdAiLdrxYduaF6UvSxCXTj2uAnstHJTgucwiY",
+  "metadata": {
+    "name": "ecash_program",
+    "version": "0.1.0",
+    "spec": "0.1.0"
+  },
+  "instructions": [
+    {
+      "name": "initialize_state",
+      "discriminator": [
+        190,
+        171,
+        224,
+        219,
+        217,
+        72,
+        199,
+        176
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  97,
+                  115,
+                  104,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "initialize_vault",
+      "discriminator": [
+        48,
+        191,
+        163,
+        44,
+        71,
+        129,
+        63,
+        164
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  97,
+                  115,
+                  104,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "authority_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "create_token_metadata",
+      "discriminator": [221, 80, 176, 37, 153, 188, 160, 68],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [103, 108, 111, 98, 97, 108, 95, 115, 116, 97, 116, 101]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [101, 99, 97, 115, 104, 95, 109, 105, 110, 116]
+              }
+            ]
+          }
+        },
+        {
+          "name": "metadata",
+          "writable": true
+        },
+        {
+          "name": "token_metadata_program",
+          "address": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "string"
+        },
+        {
+          "name": "uri",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "register",
+      "discriminator": [
+        211,
+        124,
+        67,
+        15,
+        211,
+        194,
+        178,
+        240
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "miner_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "referrer",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "enter_batch",
+      "discriminator": [
+        104,
+        253,
+        44,
+        137,
+        228,
+        6,
+        173,
+        96
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "miner_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  97,
+                  115,
+                  104,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "miner_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "pick",
+      "discriminator": [
+        245,
+        194,
+        203,
+        3,
+        198,
+        81,
+        178,
+        103
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "miner_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "global_state",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "puzzle_id",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "commit_solve",
+      "discriminator": [
+        180,
+        76,
+        125,
+        84,
+        41,
+        42,
+        191,
+        24
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "miner_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "commit_hash",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "reveal_solve",
+      "discriminator": [
+        78,
+        11,
+        105,
+        16,
+        188,
+        239,
+        192,
+        73
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "miner_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "puzzle_solved",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  97,
+                  115,
+                  104,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "miner_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "answer",
+          "type": "string"
+        },
+        {
+          "name": "salt",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "secret",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "proof",
+          "type": {
+            "vec": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "clear_solved_pick",
+      "discriminator": [
+        222,
+        145,
+        4,
+        240,
+        163,
+        42,
+        159,
+        117
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "miner_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "puzzle_solved"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "cancel_expired_commit",
+      "discriminator": [
+        109,
+        168,
+        92,
+        53,
+        220,
+        166,
+        32,
+        2
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "miner_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "claim_daily_gas",
+      "discriminator": [
+        236,
+        19,
+        108,
+        69,
+        48,
+        174,
+        95,
+        248
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "miner_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "global_state",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "renounce_ownership",
+      "discriminator": [
+        19,
+        143,
+        91,
+        79,
+        34,
+        168,
+        174,
+        125
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "force_advance_stale_batch",
+      "discriminator": [
+        174,
+        104,
+        144,
+        1,
+        92,
+        215,
+        72,
+        251
+      ],
+      "accounts": [
+        {
+          "name": "caller",
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "create_job",
+      "discriminator": [
+        178,
+        130,
+        217,
+        110,
+        100,
+        27,
+        82,
+        119
+      ],
+      "accounts": [
+        {
+          "name": "hirer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "job",
+          "writable": true
+        },
+        {
+          "name": "job_escrow",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  97,
+                  115,
+                  104,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "hirer_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        },
+        {
+          "name": "deadline_seconds",
+          "type": "i64"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "accept_job",
+      "discriminator": [
+        43,
+        201,
+        124,
+        1,
+        19,
+        189,
+        96,
+        10
+      ],
+      "accounts": [
+        {
+          "name": "worker",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "job",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "submit_work",
+      "discriminator": [
+        158,
+        80,
+        101,
+        51,
+        114,
+        130,
+        101,
+        253
+      ],
+      "accounts": [
+        {
+          "name": "worker",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "job",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "result_hash",
+          "type": "bytes"
+        }
+      ]
+    },
+    {
+      "name": "confirm_job",
+      "discriminator": [
+        229,
+        61,
+        217,
+        223,
+        125,
+        118,
+        21,
+        67
+      ],
+      "accounts": [
+        {
+          "name": "hirer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "job",
+          "writable": true
+        },
+        {
+          "name": "job_escrow",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  97,
+                  115,
+                  104,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "worker_token_account",
+          "writable": true
+        },
+        {
+          "name": "worker_profile",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "cancel_job",
+      "discriminator": [
+        126,
+        241,
+        155,
+        241,
+        50,
+        236,
+        83,
+        118
+      ],
+      "accounts": [
+        {
+          "name": "hirer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "job",
+          "writable": true
+        },
+        {
+          "name": "job_escrow",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  97,
+                  115,
+                  104,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "hirer_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "reclaim_expired",
+      "discriminator": [
+        125,
+        185,
+        48,
+        75,
+        0,
+        71,
+        93,
+        98
+      ],
+      "accounts": [
+        {
+          "name": "hirer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "job",
+          "writable": true
+        },
+        {
+          "name": "job_escrow",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  97,
+                  115,
+                  104,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "hirer_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "file_dispute",
+      "discriminator": [
+        210,
+        63,
+        221,
+        114,
+        212,
+        97,
+        195,
+        156
+      ],
+      "accounts": [
+        {
+          "name": "disputer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "job",
+          "writable": true
+        },
+        {
+          "name": "dispute",
+          "writable": true
+        },
+        {
+          "name": "job_escrow",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  97,
+                  115,
+                  104,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "disputer_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "assign_arbitrator",
+      "discriminator": [
+        227,
+        183,
+        153,
+        251,
+        4,
+        55,
+        13,
+        56
+      ],
+      "accounts": [
+        {
+          "name": "arbitrator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "job"
+        },
+        {
+          "name": "dispute",
+          "writable": true
+        },
+        {
+          "name": "arbitrator_stats"
+        },
+        {
+          "name": "job_escrow",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  97,
+                  115,
+                  104,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "arbitrator_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "vote_on_dispute",
+      "discriminator": [
+        7,
+        213,
+        96,
+        171,
+        252,
+        59,
+        55,
+        23
+      ],
+      "accounts": [
+        {
+          "name": "arbitrator",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "dispute",
+          "writable": true
+        }
+      ],
+      "args": [
+        {
+          "name": "vote",
+          "type": {
+            "defined": {
+              "name": "Vote"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "resolve_dispute",
+      "discriminator": [
+        231,
+        6,
+        202,
+        6,
+        96,
+        103,
+        12,
+        230
+      ],
+      "accounts": [
+        {
+          "name": "resolver",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "job",
+          "writable": true
+        },
+        {
+          "name": "dispute",
+          "writable": true
+        },
+        {
+          "name": "job_escrow",
+          "writable": true
+        },
+        {
+          "name": "mint",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  101,
+                  99,
+                  97,
+                  115,
+                  104,
+                  95,
+                  109,
+                  105,
+                  110,
+                  116
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "hirer_token_account",
+          "writable": true
+        },
+        {
+          "name": "worker_token_account",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "register_profile",
+      "discriminator": [
+        218,
+        120,
+        4,
+        210,
+        2,
+        210,
+        149,
+        255
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "miner_state",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "agent_profile",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  103,
+                  101,
+                  110,
+                  116,
+                  95,
+                  112,
+                  114,
+                  111,
+                  102,
+                  105,
+                  108,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "update_profile",
+      "discriminator": [
+        98,
+        67,
+        99,
+        206,
+        86,
+        115,
+        175,
+        1
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "miner_state",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "agent_profile",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  103,
+                  101,
+                  110,
+                  116,
+                  95,
+                  112,
+                  114,
+                  111,
+                  102,
+                  105,
+                  108,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "refresh_solve_count",
+      "discriminator": [
+        58,
+        182,
+        220,
+        42,
+        210,
+        113,
+        132,
+        190
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "signer": true
+        },
+        {
+          "name": "miner_state",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  109,
+                  105,
+                  110,
+                  101,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "agent_profile",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  103,
+                  101,
+                  110,
+                  116,
+                  95,
+                  112,
+                  114,
+                  111,
+                  102,
+                  105,
+                  108,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "enroll_as_arbitrator",
+      "discriminator": [
+        51,
+        73,
+        98,
+        35,
+        173,
+        40,
+        114,
+        190
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "agent_profile",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  103,
+                  101,
+                  110,
+                  116,
+                  95,
+                  112,
+                  114,
+                  111,
+                  102,
+                  105,
+                  108,
+                  101
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "arbitrator_stats",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  114,
+                  98,
+                  105,
+                  116,
+                  114,
+                  97,
+                  116,
+                  111,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  115
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "withdraw_from_arbitration",
+      "discriminator": [
+        4,
+        2,
+        212,
+        25,
+        225,
+        52,
+        237,
+        52
+      ],
+      "accounts": [
+        {
+          "name": "owner",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "global_state",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  103,
+                  108,
+                  111,
+                  98,
+                  97,
+                  108,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  101
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "arbitrator_stats",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  97,
+                  114,
+                  98,
+                  105,
+                  116,
+                  114,
+                  97,
+                  116,
+                  111,
+                  114,
+                  95,
+                  115,
+                  116,
+                  97,
+                  116,
+                  115
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "owner"
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "GlobalState",
+      "discriminator": [
+        163,
+        46,
+        74,
+        168,
+        216,
+        123,
+        133,
+        98
+      ]
+    },
+    {
+      "name": "MinerState",
+      "discriminator": [
+        171,
+        93,
+        72,
+        78,
+        139,
+        153,
+        97,
+        8
+      ]
+    },
+    {
+      "name": "PuzzleSolved",
+      "discriminator": [
+        18,
+        76,
+        55,
+        11,
+        132,
+        83,
+        154,
+        55
+      ]
+    },
+    {
+      "name": "Job",
+      "discriminator": [
+        75,
+        124,
+        80,
+        203,
+        161,
+        180,
+        202,
+        80
+      ]
+    },
+    {
+      "name": "Dispute",
+      "discriminator": [
+        36,
+        49,
+        241,
+        67,
+        40,
+        36,
+        241,
+        74
+      ]
+    },
+    {
+      "name": "AgentProfile",
+      "discriminator": [
+        60,
+        227,
+        42,
+        24,
+        0,
+        87,
+        86,
+        205
+      ]
+    },
+    {
+      "name": "ArbitratorStats",
+      "discriminator": [
+        27,
+        219,
+        4,
+        203,
+        63,
+        209,
+        214,
+        28
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "MinerRegistered",
+      "discriminator": [
+        40,
+        91,
+        92,
+        195,
+        9,
+        137,
+        86,
+        194
+      ]
+    },
+    {
+      "name": "BatchEntered",
+      "discriminator": [
+        19,
+        222,
+        202,
+        151,
+        176,
+        174,
+        131,
+        139
+      ]
+    },
+    {
+      "name": "PuzzlePicked",
+      "discriminator": [
+        172,
+        163,
+        105,
+        8,
+        134,
+        213,
+        106,
+        131
+      ]
+    },
+    {
+      "name": "CommitMade",
+      "discriminator": [
+        37,
+        144,
+        135,
+        240,
+        123,
+        213,
+        125,
+        233
+      ]
+    },
+    {
+      "name": "PuzzleRevealed",
+      "discriminator": [
+        115,
+        164,
+        50,
+        131,
+        175,
+        103,
+        58,
+        95
+      ]
+    },
+    {
+      "name": "BatchAdvanced",
+      "discriminator": [
+        13,
+        25,
+        137,
+        28,
+        206,
+        96,
+        96,
+        9
+      ]
+    },
+    {
+      "name": "JobCreated",
+      "discriminator": [
+        48,
+        110,
+        162,
+        177,
+        67,
+        74,
+        159,
+        131
+      ]
+    },
+    {
+      "name": "JobAccepted",
+      "discriminator": [
+        47,
+        54,
+        152,
+        59,
+        118,
+        195,
+        251,
+        114
+      ]
+    },
+    {
+      "name": "WorkSubmitted",
+      "discriminator": [
+        136,
+        185,
+        210,
+        174,
+        216,
+        140,
+        64,
+        125
+      ]
+    },
+    {
+      "name": "JobConfirmed",
+      "discriminator": [
+        111,
+        213,
+        86,
+        157,
+        116,
+        210,
+        130,
+        184
+      ]
+    },
+    {
+      "name": "JobCancelled",
+      "discriminator": [
+        203,
+        84,
+        143,
+        130,
+        48,
+        134,
+        74,
+        191
+      ]
+    },
+    {
+      "name": "JobReclaimed",
+      "discriminator": [
+        121,
+        145,
+        47,
+        148,
+        70,
+        117,
+        101,
+        4
+      ]
+    },
+    {
+      "name": "DisputeFiled",
+      "discriminator": [
+        201,
+        119,
+        206,
+        64,
+        219,
+        44,
+        249,
+        153
+      ]
+    },
+    {
+      "name": "ArbitratorAssigned",
+      "discriminator": [
+        94,
+        253,
+        243,
+        225,
+        29,
+        169,
+        99,
+        110
+      ]
+    },
+    {
+      "name": "ArbitratorVoted",
+      "discriminator": [
+        76,
+        137,
+        206,
+        126,
+        123,
+        184,
+        207,
+        187
+      ]
+    },
+    {
+      "name": "DisputeResolved",
+      "discriminator": [
+        121,
+        64,
+        249,
+        153,
+        139,
+        128,
+        236,
+        187
+      ]
+    },
+    {
+      "name": "ProfileRegistered",
+      "discriminator": [
+        250,
+        192,
+        146,
+        180,
+        73,
+        11,
+        17,
+        147
+      ]
+    },
+    {
+      "name": "ProfileUpdated",
+      "discriminator": [
+        186,
+        248,
+        62,
+        98,
+        112,
+        98,
+        161,
+        252
+      ]
+    },
+    {
+      "name": "SolveCountUpdated",
+      "discriminator": [
+        32,
+        149,
+        113,
+        231,
+        194,
+        171,
+        213,
+        53
+      ]
+    },
+    {
+      "name": "ArbitratorEnrolled",
+      "discriminator": [
+        58,
+        44,
+        11,
+        33,
+        1,
+        0,
+        173,
+        105
+      ]
+    },
+    {
+      "name": "ArbitratorWithdrawn",
+      "discriminator": [
+        245,
+        203,
+        15,
+        254,
+        234,
+        34,
+        207,
+        34
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "Overflow",
+      "msg": "Arithmetic overflow"
+    },
+    {
+      "code": 6001,
+      "name": "AlreadyRegistered",
+      "msg": "Already registered"
+    },
+    {
+      "code": 6002,
+      "name": "NotRegistered",
+      "msg": "Not registered"
+    },
+    {
+      "code": 6003,
+      "name": "AlreadyEnteredBatch",
+      "msg": "Already entered current batch"
+    },
+    {
+      "code": 6004,
+      "name": "NotEnteredBatch",
+      "msg": "Not entered current batch"
+    },
+    {
+      "code": 6005,
+      "name": "CooldownActive",
+      "msg": "Batch cooldown is active"
+    },
+    {
+      "code": 6006,
+      "name": "LockedOut",
+      "msg": "User is locked out"
+    },
+    {
+      "code": 6007,
+      "name": "PuzzleOutOfBatchRange",
+      "msg": "Puzzle is out of current batch range"
+    },
+    {
+      "code": 6008,
+      "name": "AlreadyHasPick",
+      "msg": "Already has an active pick"
+    },
+    {
+      "code": 6009,
+      "name": "NoPick",
+      "msg": "No active pick"
+    },
+    {
+      "code": 6010,
+      "name": "AlreadyHasCommit",
+      "msg": "Already has an active commit"
+    },
+    {
+      "code": 6011,
+      "name": "NoCommit",
+      "msg": "No active commit"
+    },
+    {
+      "code": 6012,
+      "name": "SameSlotReveal",
+      "msg": "Cannot reveal in same slot as commit"
+    },
+    {
+      "code": 6013,
+      "name": "RevealWindowExpired",
+      "msg": "Reveal window has expired"
+    },
+    {
+      "code": 6014,
+      "name": "InvalidCommitHash",
+      "msg": "Invalid commit hash"
+    },
+    {
+      "code": 6015,
+      "name": "InvalidMerkleProof",
+      "msg": "Invalid merkle proof"
+    },
+    {
+      "code": 6016,
+      "name": "CommitNotExpired",
+      "msg": "Commit has not expired yet"
+    },
+    {
+      "code": 6017,
+      "name": "Unauthorized",
+      "msg": "Unauthorized"
+    },
+    {
+      "code": 6018,
+      "name": "AlreadyRenounced",
+      "msg": "Already renounced"
+    },
+    {
+      "code": 6019,
+      "name": "BatchNotStale",
+      "msg": "Batch is not stale yet"
+    },
+    {
+      "code": 6020,
+      "name": "JobBelowMinimum",
+      "msg": "Job amount below minimum (10 ECASH)"
+    },
+    {
+      "code": 6021,
+      "name": "DeadlineTooShort",
+      "msg": "Deadline too short (minimum 1 hour)"
+    },
+    {
+      "code": 6022,
+      "name": "DeadlineTooLong",
+      "msg": "Deadline too long (maximum 30 days)"
+    },
+    {
+      "code": 6023,
+      "name": "EmptyDescription",
+      "msg": "Description cannot be empty"
+    },
+    {
+      "code": 6024,
+      "name": "DescriptionTooLong",
+      "msg": "Description too long"
+    },
+    {
+      "code": 6025,
+      "name": "JobNotOpen",
+      "msg": "Job is not open"
+    },
+    {
+      "code": 6026,
+      "name": "JobNotAccepted",
+      "msg": "Job is not accepted"
+    },
+    {
+      "code": 6027,
+      "name": "JobNotSubmitted",
+      "msg": "Job work not submitted"
+    },
+    {
+      "code": 6028,
+      "name": "CannotSelfHire",
+      "msg": "Cannot hire yourself"
+    },
+    {
+      "code": 6029,
+      "name": "DeadlinePassed",
+      "msg": "Job deadline has passed"
+    },
+    {
+      "code": 6030,
+      "name": "NotWorker",
+      "msg": "Not the worker"
+    },
+    {
+      "code": 6031,
+      "name": "NotHirer",
+      "msg": "Not the hirer"
+    },
+    {
+      "code": 6032,
+      "name": "NotParty",
+      "msg": "Not a party to this job"
+    },
+    {
+      "code": 6033,
+      "name": "EmptyResult",
+      "msg": "Result cannot be empty"
+    },
+    {
+      "code": 6034,
+      "name": "ResultTooLong",
+      "msg": "Result too long"
+    },
+    {
+      "code": 6035,
+      "name": "JobNotExpired",
+      "msg": "Job has not expired"
+    },
+    {
+      "code": 6036,
+      "name": "CannotReclaim",
+      "msg": "Cannot reclaim this job"
+    },
+    {
+      "code": 6037,
+      "name": "NotArbitrator",
+      "msg": "Not an arbitrator"
+    },
+    {
+      "code": 6038,
+      "name": "AlreadyVoted",
+      "msg": "Already voted"
+    },
+    {
+      "code": 6039,
+      "name": "InvalidVote",
+      "msg": "Invalid vote"
+    },
+    {
+      "code": 6040,
+      "name": "VotingEnded",
+      "msg": "Voting has ended"
+    },
+    {
+      "code": 6041,
+      "name": "DisputeAlreadyResolved",
+      "msg": "Dispute already resolved"
+    },
+    {
+      "code": 6042,
+      "name": "VotingStillOpen",
+      "msg": "Voting still open"
+    },
+    {
+      "code": 6043,
+      "name": "TooManyArbitrators",
+      "msg": "Too many arbitrators"
+    },
+    {
+      "code": 6044,
+      "name": "AlreadyAssigned",
+      "msg": "Already assigned"
+    },
+    {
+      "code": 6045,
+      "name": "NotVerified",
+      "msg": "Must have 1+ puzzle solve"
+    },
+    {
+      "code": 6046,
+      "name": "EmptyName",
+      "msg": "Name cannot be empty"
+    },
+    {
+      "code": 6047,
+      "name": "NameTooLong",
+      "msg": "Name too long"
+    },
+    {
+      "code": 6048,
+      "name": "BelowSilverTier",
+      "msg": "Must be Silver tier (10+ solves)"
+    },
+    {
+      "code": 6049,
+      "name": "AlreadyEnrolledArbitrator",
+      "msg": "Already enrolled as arbitrator"
+    },
+    {
+      "code": 6050,
+      "name": "NotEnrolledArbitrator",
+      "msg": "Not enrolled as arbitrator"
+    },
+    {
+      "code": 6051,
+      "name": "AccuracyTooLow",
+      "msg": "Accuracy too low"
+    },
+    {
+      "code": 6052,
+      "name": "CannotArbitrateOwnDispute",
+      "msg": "Cannot arbitrate own dispute"
+    }
+  ],
+  "types": [
+    {
+      "name": "GlobalState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "merkle_root",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "total_solved",
+            "type": "u64"
+          },
+          {
+            "name": "current_batch",
+            "type": "u64"
+          },
+          {
+            "name": "batch_solve_count",
+            "type": "u64"
+          },
+          {
+            "name": "cooldown_end",
+            "type": "i64"
+          },
+          {
+            "name": "total_burned",
+            "type": "u64"
+          },
+          {
+            "name": "is_renounced",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "mint_bump",
+            "type": "u8"
+          },
+          {
+            "name": "vault_bump",
+            "type": "u8"
+          },
+          {
+            "name": "total_jobs_created",
+            "type": "u64"
+          },
+          {
+            "name": "total_jobs_completed",
+            "type": "u64"
+          },
+          {
+            "name": "total_disputes",
+            "type": "u64"
+          },
+          {
+            "name": "total_escrow_burned",
+            "type": "u64"
+          },
+          {
+            "name": "next_job_id",
+            "type": "u64"
+          },
+          {
+            "name": "total_agents_registered",
+            "type": "u64"
+          },
+          {
+            "name": "total_arbitrators",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MinerState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "registered",
+            "type": "bool"
+          },
+          {
+            "name": "gas_balance",
+            "type": "u64"
+          },
+          {
+            "name": "entered_batch",
+            "type": "u64"
+          },
+          {
+            "name": "has_pick",
+            "type": "bool"
+          },
+          {
+            "name": "active_pick",
+            "type": "u64"
+          },
+          {
+            "name": "pick_timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "has_commit",
+            "type": "bool"
+          },
+          {
+            "name": "commit_hash",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "commit_slot",
+            "type": "u64"
+          },
+          {
+            "name": "attempts",
+            "type": "u8"
+          },
+          {
+            "name": "lockout_end",
+            "type": "i64"
+          },
+          {
+            "name": "last_solve_time",
+            "type": "i64"
+          },
+          {
+            "name": "solve_count",
+            "type": "u64"
+          },
+          {
+            "name": "last_regen_time",
+            "type": "i64"
+          },
+          {
+            "name": "referrer",
+            "type": "pubkey"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PuzzleSolved",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "puzzle_id",
+            "type": "u64"
+          },
+          {
+            "name": "solver",
+            "type": "pubkey"
+          },
+          {
+            "name": "solved_at",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "JobStatus",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Open"
+          },
+          {
+            "name": "Accepted"
+          },
+          {
+            "name": "WorkSubmitted"
+          },
+          {
+            "name": "Completed"
+          },
+          {
+            "name": "Cancelled"
+          },
+          {
+            "name": "Disputed"
+          },
+          {
+            "name": "Resolved"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Job",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "job_id",
+            "type": "u64"
+          },
+          {
+            "name": "hirer",
+            "type": "pubkey"
+          },
+          {
+            "name": "worker",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "deadline",
+            "type": "i64"
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
+          },
+          {
+            "name": "accepted_at",
+            "type": "i64"
+          },
+          {
+            "name": "submitted_at",
+            "type": "i64"
+          },
+          {
+            "name": "completed_at",
+            "type": "i64"
+          },
+          {
+            "name": "status",
+            "type": {
+              "defined": {
+                "name": "JobStatus"
+              }
+            }
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "result_hash",
+            "type": "bytes"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "escrow_bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Vote",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "None"
+          },
+          {
+            "name": "HirerWins"
+          },
+          {
+            "name": "WorkerWins"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DisputeOutcome",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Pending"
+          },
+          {
+            "name": "HirerWins"
+          },
+          {
+            "name": "WorkerWins"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dispute",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "job_id",
+            "type": "u64"
+          },
+          {
+            "name": "disputer",
+            "type": "pubkey"
+          },
+          {
+            "name": "dispute_fee",
+            "type": "u64"
+          },
+          {
+            "name": "filed_at",
+            "type": "i64"
+          },
+          {
+            "name": "vote_deadline",
+            "type": "i64"
+          },
+          {
+            "name": "arbitrator_1",
+            "type": "pubkey"
+          },
+          {
+            "name": "arbitrator_2",
+            "type": "pubkey"
+          },
+          {
+            "name": "arbitrator_3",
+            "type": "pubkey"
+          },
+          {
+            "name": "vote_1",
+            "type": {
+              "defined": {
+                "name": "Vote"
+              }
+            }
+          },
+          {
+            "name": "vote_2",
+            "type": {
+              "defined": {
+                "name": "Vote"
+              }
+            }
+          },
+          {
+            "name": "vote_3",
+            "type": {
+              "defined": {
+                "name": "Vote"
+              }
+            }
+          },
+          {
+            "name": "stake_1",
+            "type": "u64"
+          },
+          {
+            "name": "stake_2",
+            "type": "u64"
+          },
+          {
+            "name": "stake_3",
+            "type": "u64"
+          },
+          {
+            "name": "votes_received",
+            "type": "u8"
+          },
+          {
+            "name": "arbitrator_count",
+            "type": "u8"
+          },
+          {
+            "name": "outcome",
+            "type": {
+              "defined": {
+                "name": "DisputeOutcome"
+              }
+            }
+          },
+          {
+            "name": "resolved",
+            "type": "bool"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tier",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Unranked"
+          },
+          {
+            "name": "Bronze"
+          },
+          {
+            "name": "Silver"
+          },
+          {
+            "name": "Gold"
+          },
+          {
+            "name": "Diamond"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AgentProfile",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "registered_at",
+            "type": "i64"
+          },
+          {
+            "name": "active",
+            "type": "bool"
+          },
+          {
+            "name": "cached_solve_count",
+            "type": "u64"
+          },
+          {
+            "name": "cached_tier",
+            "type": {
+              "defined": {
+                "name": "Tier"
+              }
+            }
+          },
+          {
+            "name": "jobs_posted",
+            "type": "u64"
+          },
+          {
+            "name": "jobs_completed_as_hirer",
+            "type": "u64"
+          },
+          {
+            "name": "jobs_completed_as_worker",
+            "type": "u64"
+          },
+          {
+            "name": "disputes_as_party",
+            "type": "u64"
+          },
+          {
+            "name": "disputes_won",
+            "type": "u64"
+          },
+          {
+            "name": "disputes_lost",
+            "type": "u64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ArbitratorStats",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "owner",
+            "type": "pubkey"
+          },
+          {
+            "name": "enrolled",
+            "type": "bool"
+          },
+          {
+            "name": "enrolled_at",
+            "type": "i64"
+          },
+          {
+            "name": "disputes_handled",
+            "type": "u64"
+          },
+          {
+            "name": "correct_votes",
+            "type": "u64"
+          },
+          {
+            "name": "total_earned",
+            "type": "u64"
+          },
+          {
+            "name": "total_slashed",
+            "type": "u64"
+          },
+          {
+            "name": "last_case_at",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MinerRegistered",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "miner",
+            "type": "pubkey"
+          },
+          {
+            "name": "referrer",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BatchEntered",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "miner",
+            "type": "pubkey"
+          },
+          {
+            "name": "batch",
+            "type": "u64"
+          },
+          {
+            "name": "burned",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PuzzlePicked",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "miner",
+            "type": "pubkey"
+          },
+          {
+            "name": "puzzle_id",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CommitMade",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "miner",
+            "type": "pubkey"
+          },
+          {
+            "name": "puzzle_id",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PuzzleRevealed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "miner",
+            "type": "pubkey"
+          },
+          {
+            "name": "puzzle_id",
+            "type": "u64"
+          },
+          {
+            "name": "reward",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BatchAdvanced",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "new_batch",
+            "type": "u64"
+          },
+          {
+            "name": "cooldown_end",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "JobCreated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "job_id",
+            "type": "u64"
+          },
+          {
+            "name": "hirer",
+            "type": "pubkey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "deadline",
+            "type": "i64"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "JobAccepted",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "job_id",
+            "type": "u64"
+          },
+          {
+            "name": "worker",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WorkSubmitted",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "job_id",
+            "type": "u64"
+          },
+          {
+            "name": "result_hash",
+            "type": "bytes"
+          }
+        ]
+      }
+    },
+    {
+      "name": "JobConfirmed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "job_id",
+            "type": "u64"
+          },
+          {
+            "name": "worker_paid",
+            "type": "u64"
+          },
+          {
+            "name": "burned",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "JobCancelled",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "job_id",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "JobReclaimed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "job_id",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DisputeFiled",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "job_id",
+            "type": "u64"
+          },
+          {
+            "name": "disputer",
+            "type": "pubkey"
+          },
+          {
+            "name": "fee",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ArbitratorAssigned",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "job_id",
+            "type": "u64"
+          },
+          {
+            "name": "arbitrator",
+            "type": "pubkey"
+          },
+          {
+            "name": "slot",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ArbitratorVoted",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "job_id",
+            "type": "u64"
+          },
+          {
+            "name": "arbitrator",
+            "type": "pubkey"
+          },
+          {
+            "name": "vote",
+            "type": {
+              "defined": {
+                "name": "Vote"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "DisputeResolved",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "job_id",
+            "type": "u64"
+          },
+          {
+            "name": "outcome",
+            "type": {
+              "defined": {
+                "name": "DisputeOutcome"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProfileRegistered",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "agent",
+            "type": "pubkey"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProfileUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "agent",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SolveCountUpdated",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "agent",
+            "type": "pubkey"
+          },
+          {
+            "name": "count",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ArbitratorEnrolled",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "agent",
+            "type": "pubkey"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ArbitratorWithdrawn",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "agent",
+            "type": "pubkey"
+          }
+        ]
+      }
+    }
+  ]
+}

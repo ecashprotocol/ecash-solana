@@ -1,0 +1,9 @@
+# Only ignore these - everything else gets copied
+node_modules/
+.env
+*.log
+.DS_Store
+
+# Explicitly DO NOT ignore data files
+!data/
+!data/*
